@@ -1,0 +1,17 @@
+OBJS	= customerbillingsystem.o
+SOURCE	= customerbillingsystem.c
+HEADER	= 
+OUT	= final.out
+CC	 = gcc
+FLAGS	 = -g -c -Wall
+LFLAGS	 = 
+
+all: $(OBJS)
+	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
+
+customerbillingsystem.o: customerbillingsystem.c
+	$(CC) $(FLAGS) customerbillingsystem.c 
+
+
+clean:
+	rm -f $(OBJS) $(OUT)
